@@ -5,12 +5,12 @@ export default class TreeNode {
   protected _parent?: TreeNode
   protected _children: TreeNode[] = []
 
-  constructor(data: HasId, parent?: TreeNode) {
+  constructor(data: HasId) {
     this._data = data
-    this._parent = parent
   }
 
   public addChild(child: TreeNode, position = 0) {
+    child._parent = this
     this.children.splice(position, 0, child)
   }
 
@@ -39,8 +39,7 @@ export default class TreeNode {
   }
 
   public get level(): number {
-    const counter = 1
-    return counter + (this.parent ? this.parent.level : 0)
+    return 1 + (this.parent ? this.parent.level : 0)
   }
 
   get children(): TreeNode[] {
@@ -53,5 +52,11 @@ export default class TreeNode {
 
   get data(): HasId {
     return this._data
+  }
+
+  toString(): string {
+    return `${new Array(this.level).fill('-').join('')} ${
+      this.data.name
+    }\n${this.children.map((c) => c.toString()).join('')}`
   }
 }

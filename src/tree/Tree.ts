@@ -1,6 +1,6 @@
-import { TreeNode } from './TreeNode'
+import TreeNode from './TreeNode'
 
-export class Tree {
+export default class Tree {
   public node: TreeNode
 
   constructor(node: TreeNode) {

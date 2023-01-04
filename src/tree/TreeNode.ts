@@ -1,17 +1,16 @@
-import { HasId } from '../model/HasId'
+import HasId from '../model/HasId'
 
-export class TreeNode {
-  public parentId?: string
-  public children: TreeNode[]
-  public data: HasId
+export default class TreeNode {
+  protected _data: HasId
+  protected _parent?: TreeNode
+  protected _children: TreeNode[] = []
 
-  constructor(data: HasId, children: TreeNode[] = [], parentId?: string) {
-    this.data = data
-    this.parentId = parentId
-    this.children = children
+  constructor(data: HasId, parent?: TreeNode) {
+    this._data = data
+    this._parent = parent
   }
 
-  public addChildren(child: TreeNode, position = 0) {
+  public addChild(child: TreeNode, position = 0) {
     this.children.splice(position, 0, child)
   }
 
@@ -40,6 +39,19 @@ export class TreeNode {
   }
 
   public get level(): number {
-    return -1 // conta pai, avô, bisavô...
+    const counter = 1
+    return counter + (this.parent ? this.parent.level : 0)
+  }
+
+  get children(): TreeNode[] {
+    return this._children
+  }
+
+  get parent(): TreeNode | undefined {
+    return this._parent
+  }
+
+  get data(): HasId {
+    return this._data
   }
 }

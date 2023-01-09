@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "typescript": "^4.9.4",
+    "@iagows/basic-data": "*",
     "ts-serializable": "^3.0.18"
   },
   "devDependencies": {

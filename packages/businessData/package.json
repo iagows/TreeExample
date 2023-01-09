@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "typescript": "^4.9.4",
+    "@iagows/basic-data": "*",
+    "@iagows/data-structure": "*",
     "reflect-metadata": "^0.1.13",
     "ts-serializable": "^3.0.18"
   },

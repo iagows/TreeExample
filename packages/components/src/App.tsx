@@ -1,14 +1,23 @@
 import './App.css'
 
 import React from 'react'
-import CarAssemblyDTO from './model/CarAssemblyDTO'
-import { car, carAssembly, carParts, body, powerTrains } from './model/samples'
-import CarDTO from './model/CarDTO'
-import CarPartsDTO from './model/CarPartsDTO'
-import { CarNode } from './tree/car/CarNode'
-import { CarTypes } from './tree/car/CarTypes'
-import BodyDTO from './model/BodyDTO'
-import PowerTrainsDTO from './model/PowerTrains'
+
+import CarDTO from '../packages/businessLogic/model/CarDTO'
+import BodyDTO from '../packages/businessLogic/model/BodyDTO'
+import CarPartsDTO from '../packages/businessLogic/model/CarPartsDTO'
+import PowerTrainsDTO from '../packages/businessLogic/model/PowerTrainsDTO'
+import CarAssemblyDTO from '../packages/businessLogic/model/CarAssemblyDTO'
+
+import { CarNode } from '../packages/dataStructure/tree/car/CarNode'
+import { CarTypes } from '../packages/dataStructure/tree/car/CarTypes'
+
+import {
+  car,
+  carAssembly,
+  carParts,
+  body,
+  powerTrains
+} from '../packages/businessLogic/model/samples'
 
 function App() {
   const _assembly = new CarAssemblyDTO().fromJSON(carAssembly)

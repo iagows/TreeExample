@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "./**/*.ts",
+    "../basic_data/HasIdDTO.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

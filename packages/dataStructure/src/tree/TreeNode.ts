@@ -1,11 +1,11 @@
-import HasId from '../model/HasId'
+import HasIdDTO from '@iagows/basic-data/HasIdDTO'
 
 export default class TreeNode {
-  protected _data: HasId
+  protected _data: HasIdDTO
   protected _parent?: TreeNode
   protected _children: TreeNode[] = []
 
-  constructor(data: HasId) {
+  constructor(data: HasIdDTO) {
     this._data = data
   }
 
@@ -35,11 +35,11 @@ export default class TreeNode {
   }
 
   public get isRoot(): boolean {
-    return this.level === 0
+    return this.level === 1
   }
 
   public get level(): number {
-    return 1 + (this.parent ? this.parent.level : 0)
+    return 1 + (this.parent?.level ?? 0)
   }
 
   get children(): TreeNode[] {
@@ -50,7 +50,7 @@ export default class TreeNode {
     return this._parent
   }
 
-  get data(): HasId {
+  get data(): HasIdDTO {
     return this._data
   }
 

@@ -1,6 +1,7 @@
-import HasId from '../../model/HasId'
-import TreeNode from '../TreeNode'
 import { carTypeMap, CarTypes } from './CarTypes'
+
+import HasIdDTO from '@iagows/basic-data/HasIdDTO'
+import TreeNode from '@iagows/data-structure/tree/TreeNode'
 
 export class CarNode extends TreeNode {
   protected _carType: CarTypes
@@ -8,7 +9,7 @@ export class CarNode extends TreeNode {
 
   private constructor(
     carType: CarTypes,
-    data: HasId,
+    data: HasIdDTO,
     allowedChildrenTypes: CarTypes[] = []
   ) {
     super(data)
@@ -16,11 +17,11 @@ export class CarNode extends TreeNode {
     this.allowedChildrenTypes = allowedChildrenTypes
   }
 
-  public static create(carType: CarTypes, data: HasId): CarNode {
+  public static create(carType: CarTypes, data: HasIdDTO): CarNode {
     return new CarNode(carType, data, carTypeMap(carType))
   }
 
-  protected canAddChild(child: CarNode): boolean {
+  public canAddChild(child: CarNode): boolean {
     return this.allowedChildrenTypes.some((t) => child.carType === t)
   }
 

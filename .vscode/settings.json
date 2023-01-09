@@ -12,5 +12,8 @@
     // Let ESLint (incorporating Prettier errors) format code on save
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
+    },
+    "cSpell.words": [
+        "iagows"
+    ]
 }

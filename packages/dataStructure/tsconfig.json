@@ -5,12 +5,15 @@
     "declarationMap": true,
     "sourceMap": true,
     "composite": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "rootDir": "src",
     "noEmit": false
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "dist/*"
   ],
   "references": [
     {

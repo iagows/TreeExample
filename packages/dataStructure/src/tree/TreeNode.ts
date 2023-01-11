@@ -1,4 +1,4 @@
-import HasIdDTO from '@iagows/basic-data/HasIdDTO'
+import HasIdDTO from '@iagows/basic-data/src/HasIdDTO'
 
 export default class TreeNode {
   protected _data: HasIdDTO

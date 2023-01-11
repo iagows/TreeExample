@@ -2,14 +2,14 @@ import './App.css'
 
 import React from 'react'
 
-import CarDTO from '../packages/businessLogic/model/CarDTO'
-import BodyDTO from '../packages/businessLogic/model/BodyDTO'
-import CarPartsDTO from '../packages/businessLogic/model/CarPartsDTO'
-import PowerTrainsDTO from '../packages/businessLogic/model/PowerTrainsDTO'
-import CarAssemblyDTO from '../packages/businessLogic/model/CarAssemblyDTO'
+import CarDTO from "@iagows/business-data/src/model/CarDTO"
+import BodyDTO from '@iagows/business-data/src/model/BodyDTO'
+import CarPartsDTO from '@iagows/business-data/src/model/CarPartsDTO'
+import PowerTrainsDTO from '@iagows/business-data/src/model/PowerTrainsDTO'
+import CarAssemblyDTO from '@iagows/business-data/src/model/CarAssemblyDTO'
 
-import { CarNode } from '../packages/dataStructure/tree/car/CarNode'
-import { CarTypes } from '../packages/dataStructure/tree/car/CarTypes'
+import { CarNode } from "@iagows/business-data/src/car/CarNode"
+import { CarTypes } from "@iagows/business-data/src/car/CarTypes"
 
 import {
   car,
@@ -17,7 +17,7 @@ import {
   carParts,
   body,
   powerTrains
-} from '../packages/businessLogic/model/samples'
+} from '@iagows/business-data/src/model/samples'
 
 function App() {
   const _assembly = new CarAssemblyDTO().fromJSON(carAssembly)

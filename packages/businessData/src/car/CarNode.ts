@@ -1,7 +1,7 @@
 import { carTypeMap, CarTypes } from './CarTypes'
 
-import HasIdDTO from '@iagows/basic-data/HasIdDTO'
-import TreeNode from '@iagows/data-structure/tree/TreeNode'
+import HasIdDTO from '@iagows/basic-data/src/HasIdDTO'
+import TreeNode from '@iagows/data-structure/src/tree/TreeNode'
 
 export class CarNode extends TreeNode {
   protected _carType: CarTypes

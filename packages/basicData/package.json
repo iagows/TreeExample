@@ -7,10 +7,6 @@
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist/*.d.ts",
-    "dist/**/*.d.ts"
-  ],
   "scripts": {
     "build": "tsc --build",
     "test": "react-scripts test"

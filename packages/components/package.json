@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo",
     "build": "yarn run clean && tsc --build",
     "test": "react-scripts test"
   },

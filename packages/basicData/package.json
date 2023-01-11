@@ -8,9 +8,14 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc --build",
+    "clean": "rm -rf ./dist",
+    "build": "yarn run clean && tsc --build",
     "test": "react-scripts test"
   },
+  "files": [
+    "dist/*.d.ts",
+    "dist/**/*.d.ts"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -23,6 +23,7 @@
     "build:basicData": "yarn workspace @iagows/basic-data build",
     "build:businessData": "yarn workspace @iagows/business-data build",
     "build:components": "yarn workspace @iagows/components build",
-    "build:dataStructure": "yarn workspace @iagows/data-structure build"
+    "build:dataStructure": "yarn workspace @iagows/data-structure build",
+    "build": "yarn run build:basicData && yarn run build:dataStructure && yarn run build:businessData && yarn run build:components"
   }
 }

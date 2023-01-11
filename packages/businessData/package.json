@@ -7,14 +7,15 @@
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "yarn run clean && tsc --build",
+    "test": "react-scripts test"
+  },
   "files": [
     "dist/*.d.ts",
     "dist/**/*.d.ts"
   ],
-  "scripts": {
-    "build": "tsc --build",
-    "test": "react-scripts test"
-  },
   "eslintConfig": {
     "extends": [
       "react-app",

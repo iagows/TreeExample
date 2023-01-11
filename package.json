@@ -6,39 +6,23 @@
     "url": "https://github.com/iagows"
   },
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "storybook"
-    ]
-  },
-  "paths": {
-    "src/*": [
-      "*"
-    ]
-  },
-  "scripts": {
-    "publish:all": "chmod +x ./scripts/publish.sh && ./scripts/publish.sh"
-  },
+  "workspaces": [
+    "packages/*",
+    "storybook"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "lerna": "^6.4.0"
+  },
+  "scripts": {
+    "build:basicData": "yarn workspace @iagows/basic-data build",
+    "build:businessData": "yarn workspace @iagows/business-data build",
+    "build:components": "yarn workspace @iagows/components build",
+    "build:dataStructure": "yarn workspace @iagows/data-structure build"
   }
 }
